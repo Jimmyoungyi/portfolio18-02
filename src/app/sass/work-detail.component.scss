@@ -1,0 +1,106 @@
+@import 'var';
+section{
+	min-width: 800px;
+	@media #{$media-rule-1} {
+		width: calc(100% - 60px);
+		min-width: initial;
+		padding: 0 30px;
+	}
+	.link{
+		text-decoration: underline;
+		text-align: center;
+		margin-top: 50px;
+	}
+	.title{
+		text-align: center;
+		margin-top: 30px;
+	}
+	.imageContainer{
+		margin-top: 30px;
+		width: 100%;
+		padding-top: 45%;
+		background-size: cover;
+		background-position: center;
+	}
+	.content{
+		padding: 0px 100px 50px;
+		line-height: 24px;
+		overflow: hidden;
+		@media #{$media-rule-1} {
+			padding: 30px;
+		}
+		.label{
+			width: 25%;
+			float: left;
+			margin-bottom: 50px;
+			@media #{$media-rule-1} {
+				width: 50%;
+			}
+		}
+		.spaceon{
+			width: calc(100% - 150px);
+			display: inline-block;
+			float: right;
+			overflow: hidden;
+			@media #{$media-rule-1} {
+				width: 100%;
+			}
+			a{
+				display: inline-block;
+			}
+			.steps{
+				float: left;
+				margin-bottom: 6px;
+				.pointTo{
+					float: right;
+					margin: 0 30px;
+				}
+				.sub{
+					display: inline-block;
+					transform: translateY(-6px);
+				}
+			}
+			.steps:last-child{
+				.pointTo{
+					display: none;
+				}
+			}
+		}
+		.clear{
+			height: 50px;
+		}
+	}
+	ul{
+		li:nth-child(odd){
+			background-color: #f0f0f0;
+		}
+		li{
+			overflow: hidden;
+			padding: 150px 100px 100px 100px;
+			@media #{$media-rule-1} {
+				padding: 50px 30px;
+			}
+			.phase{
+				float: left;
+				margin-top: 0;
+				font-weight: 800;
+			}
+			.spaceon{
+				width: calc(100% - 150px);
+				display: inline-block;
+				float: right;
+				@media #{$media-rule-1} {
+					width: 100%;
+				}
+				.titleText{
+					margin-bottom: 10px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+	img{
+		width: 100%;
+		margin-top: 20px;
+	}
+}

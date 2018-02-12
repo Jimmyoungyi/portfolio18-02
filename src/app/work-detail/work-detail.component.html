@@ -1,0 +1,76 @@
+<section *ngIf="project">
+	<p class="title orangeHighligntText">{{project.name}}</p>
+	<div class="imageContainer" [ngStyle]="{'background-image': 'url('+project.image+')'}"></div>
+	<div class="content bodyText">
+		<div class="summary">
+			<div>
+				<a class="link" href="{{project.link}}" target="_blank">View Online Project</a>
+			</div>
+			<div class="clear">
+			</div>
+			<div class="label lightText">
+				<span class="parseText">Finished Time: </span>{{project.time}}
+			</div>
+			<div class="label lightText">
+				<span class="parseText">Platform: </span>{{project.type}}
+			</div>
+			<div class="label lightText">
+				<span class="parseText">Role: </span>{{project.role}}
+			</div>
+			<div class="label lightText">
+				<span class="parseText">Tool: </span>{{project.tool}}
+			</div>
+			<div>
+				<span class="parseText">Project Summary: </span>
+				<span class="spaceon lightText">{{project.summary}}</span>
+			</div>
+			<div class="clear">
+			</div>
+			<div>
+				<span class="parseText">Major Tasks: </span>
+				<span class="spaceon">
+					<span class="steps" *ngFor="let steps of project.process">
+						<a href="#{{steps[1]}}">
+							<span class="pointTo">-></span>
+							<span class="parseText">{{steps[0]}}</span>
+							<br>
+							<span class="sub lightText">{{steps[1]}}</span>
+						</a>
+					</span>
+					<span class="steps">
+						<span class="pointTo">-></span>
+						<span class="parseText">Conclusion</span>
+						<br>
+						<span class="sub lightText">Conclusion</span>
+					</span>
+				</span>
+			</div>
+		</div>
+	</div>
+	<ul class="bodyText">
+		<li *ngFor="let steps of project.process" id="{{steps[1]}}">
+			<div class="phase titleText">
+				<span>{{steps[0]}}</span>
+			</div>
+			<div class="spaceon">
+			<span class="parseText titleText">{{steps[1]}}</span>
+				<br>
+				{{steps[2]}}
+			</div>
+			<div *ngFor="let images of steps[3]">
+				<img src="{{images}}" alt="">
+			</div>
+		</li>
+		<li>
+			<div class="phase titleText">
+				<span>Conclusion</span>
+			</div>
+			<div class="spaceon">
+				{{project.conclusion}}
+			</div>
+		</li>
+	</ul>
+	<div class="link">
+		<button (click)="goPage()"><span class="icon-arrow-right"></span>View Online Project</button>
+	</div>
+</section>

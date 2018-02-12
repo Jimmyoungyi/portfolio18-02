@@ -1,0 +1,2 @@
+section{width:calc(100vw - 400px);min-width:800px;margin-left:auto;margin-right:auto;text-align:center}@media screen and (max-width: 800px){section{width:calc(100% - 60px);min-width:initial;padding:0 30px}}section .title{text-align:center;margin-top:30px;margin-bottom:50px}section .titleText{margin-bottom:10px;display:inline-block}section input,section textarea{width:300px;border:darkgray 1px solid;margin-bottom:30px;resize:vertical}section .thanks{padding-top:120px}section .thanks button{margin-top:120px}
+/*# sourceMappingURL=contact.component.css.map */

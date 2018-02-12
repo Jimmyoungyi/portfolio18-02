@@ -1,0 +1,27 @@
+<section>
+	<div class="title">
+		<p class="title orangeHighligntText">Portfolio</p>
+		<span class="righta icon-view_module" [class.active]="listStyle=='list'" (click)="changeListStyle('list')"></span>
+		<span class="rightb icon-view_day" [class.active]="listStyle=='page'" (click)="changeListStyle('page')"></span>
+	</div>
+	
+	<ul [class.list]="listStyle=='list'">
+		<li *ngFor="let item of workList;let i=index">
+			<div class="container" *ngIf="i==currentpage||listStyle=='list'" [@sectionChange]="stateDirection" (click)="listCheck(item[8])">
+				<div class="content-size">
+					<div class="content">
+						<div class="num titleText parseText">{{item[0]}}</div>
+						<div class="name titleText parseText">{{item[1]}}</div>
+						<!-- <div class="infoText">{{item[2]}}</div> -->
+						<div class="bodyText">{{item[3]}}</div>
+						<div class="bodyText">{{item[4]}}</div>
+						<div class="bodyText tool">{{item[5]}}</div>
+						<div class="sum bodyText lightText">{{item[6]}}</div>
+						<button (click)="goDetailPage(item[8])"><span class="icon-arrow-right"></span>Go Detail</button>
+					</div>
+				</div>
+				<div class="imageContainer" (click)="goDetailPage(item[8])" [ngStyle]="{'background-image': 'url(' + item[7] + ')'}"></div>
+			</div>
+		</li>
+	</ul>
+</section>

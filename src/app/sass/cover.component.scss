@@ -1,0 +1,22 @@
+section{
+	position: relative;
+	z-index: 2;
+	p{
+		margin-top: 35vh;
+		font-size: 40px;
+		font-family: 'Muli', sans-serif;
+		letter-spacing: 0.5px;
+		color: white;
+		text-align: center;
+		display: block;
+	}
+	code{
+		margin-top: 5vh;
+		font-size: 32px;
+		font-family: 'Muli', sans-serif;
+		letter-spacing: 0.5px;
+		color: white;
+		text-align: center;
+		display: block;
+	}
+}

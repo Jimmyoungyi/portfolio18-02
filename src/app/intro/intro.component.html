@@ -1,0 +1,62 @@
+<section>
+	<p class="title orangeHighligntText">{{titleArray[currentPageIndex]}}</p>
+	<article class="titleText" *ngIf="currentPage=='welcome'" [@sectionChange]="stateDirection">
+		<p class="bk">My name is <span class="parseText">Jianyi Yang</span>.</p>
+		<p class="bk">I am a <span class="parseText">front-end developer & UX designer</span>.</p>
+		<p class="bk">I am looking for a full-time position.</p>
+		<!-- <button (click)="goWorkListPage()"><span class="icon-arrow-right"></span>Works</button> -->
+		<!-- <button (click)="nextPage()"><span class="icon-arrow-down"></span>About Me</button> -->
+	</article>
+	<article *ngIf="currentPage=='education'" [@sectionChange]="stateDirection">
+		<div class="bk">
+			<p class="titleText"><span class="parseText">Academy of Art University</span>, San Francisco — MFA</p>
+			<p class="infoText">Feb. 2013 - May. 2017</p>
+			<p class="bodyText">Web Design and New Media Major</p>
+		</div>
+		<div>
+			<p class="titleText"><span class="parseText">China Central Academy of Fine Art</span>, China — BFA</p>
+			<p class="infoText">Sep. 2007 - Jun. 2011</p>
+			<p class="bodyText">Information Design Major - Experimental Media Studio</p>
+		</div>
+	</article>
+	<article *ngIf="currentPage=='experience'" [@sectionChange]="stateDirection">
+		<div class="bk">
+			<p class="titleText"><span class="parseText">Road-Twenty-Two</span>, San Francisco — Front-end developer</p>
+			<p class="infoText">Sep. 2017 - Dec. 2017</p>
+			<p class="bodyText">
+				-Consistently apply the Shopify content editor, Liquid, Html, CSS to redesign the website.
+				<br>
+				-Successfully launch, maintain, and test new website functionalities.
+				<br>
+				-Web address: <a href="https://roadtwentytwo.com/" target="_blank">roadtwentytwo.com</a>
+			</p>
+		</div>
+		<div>
+			<p class="titleText"><span class="parseText">Btrax</span>, San Francisco — Front-end developer Internship</p>
+			<p class="infoText">Sep. 2016 - Dec. 2016</p>
+			<p class="bodyText">
+				-Using multiple programming languages to turn design to website.
+				<br>
+				-Taking full responsibility of the website.
+				<br>
+				-Web address: <a href="http://btrax.com/jp/" target="_blank">btrax.com/jp</a>
+			</p>
+		</div>
+	</article>
+	<article *ngIf="currentPage=='skill'" [@sectionChange]="stateDirection">
+		<div class="bk">
+			<p class="titleText">Developer</p>
+			<p class="bodyText">
+				<br>
+				HTML, CSS, SASS, JavaScript, Google Map API, PHP, TypeScript, CoffeeScript, Liquid, MySQL, ActionScript 3, Swift 2
+				<br>
+				<br>
+				Angular 4, jQuery (mobile, UI), D3.js, Bootstrap, Wordpress, Squarespace, Shopify, Drupal, Foundation
+			</p>
+		</div>
+		<div class="bodyText">
+			<p class="titleText">Designer</p>
+			<p><br>PhotoShop, Illustrator, Sketch, Animate, Framer, Adobe Experience Design</p>
+		</div>
+	</article>
+</section>
